@@ -29,7 +29,7 @@ function Navigation() {
                     <div className="burger-menu-view">
                         <ul className="burger-menu-links">
 
-                            <li><Link to='/' onClick={toggleMenu}>Home</Link></li>
+                            <li><a href="#welcome-page" onClick={toggleMenu}>Home</a></li>
 
                             <li>
                                 <a href="#about-me" onClick={toggleMenu}>
@@ -53,7 +53,7 @@ function Navigation() {
 
             <nav className="full_screen">
                 <ul className="full_screen-links">
-                <li><Link to='/'>Home</Link></li>
+                <li><a href="#welcome-page">Home</a></li>
                     <li>
                         <a href="#about-me">About</a>
                     </li>
