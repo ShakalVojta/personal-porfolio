@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Context from "./Context.js";
 import reducer from "./reducer.js";
 import Homepage from "./portfolio-page/Homepage.jsx";
+import "/resources/scss/App.scss";
+import Navigation from "./portfolio-page/Navigation.jsx";
 
 export default function App() {
     const contextObject = {
@@ -28,6 +30,7 @@ export default function App() {
     return (
         <Context.Provider value={{ state, dispatch }}>
             <BrowserRouter>
+            <Navigation />
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                 </Routes>

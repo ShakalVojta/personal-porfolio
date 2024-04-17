@@ -1,3 +1,42 @@
+$color-text-white: #fff;
+$background-color:#2d2e32;
+$hover-color: #147efb;
+$color-text: #767676;
+
 #footer {
-    color: grey;
-}
+    background-color: $background-color;
+    color: $color-text-white;
+    padding: 3rem;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin: 0 auto;
+
+        p {
+            font-weight: 700;
+            line-height: 2;
+        }
+    
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            span{
+                
+                a {
+                    color: $color-text-white;
+                    display: inline-block;  
+                    transition: transform 0.3s ease-in-out;
+                    svg {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    &:hover {
+                        transform: scale(1.4);  
+                    }
+                }
+            }
+            }
+    }
+    }

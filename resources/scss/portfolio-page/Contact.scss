@@ -1,3 +1,62 @@
+$color-letters: #2d2e32;
+$background-color: #fff;
+$hover-color: #147efb;
+$color-text: #767676;
 #contact-me {
-    color: green;
-}   
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .container {
+        display: flex;
+        flex-direction: column;
+        .contact-detail {
+            margin-bottom: 3rem;
+            h3 {
+                text-transform: uppercase;
+                color: $hover-color;
+                margin-bottom: -1rem;
+            }
+            p {
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+        }
+        .contact-icon {
+            display: flex;
+            justify-content: space-between;
+            .contact-icon-box {
+                display: flex;
+                align-items: center;
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    height: 3.5rem;
+                    width: 3.5rem;
+                }
+
+                .contact--info {
+                    margin-left: 1rem;
+                    h4 {
+                        color: $color-letters;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $color-text;
+                        &:hover {
+                            cursor: pointer;
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

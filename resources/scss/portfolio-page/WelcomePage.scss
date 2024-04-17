@@ -1,3 +1,116 @@
-#welcome-page {
-    color: orange;
+$color-letters: #2d2e32;
+$background-color: #fff;
+$hover-color: #147efb;
+#welcome-page { 
+   color: $color-letters;
+   line-height: 1.2;
+    width: 100%;
+    background-color:#f0f0f0;
+    display: flex;
+    flex-direction: column;
+    .container {
+        width: 66%;
+        padding: 2rem;
+        margin: 0 auto;
+        .welcome-page--container {
+         display: flex;
+         max-width: 60rem;
+         .hero-text {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            max-width: 50rem;
+            h1 {
+                font-weight: 700;
+                width: 80%;
+                font-size: 3.5rem;
+         }
+        }
+        .hand {
+            height: 50px;
+            position: absolute;
+            top: 34.5%;
+            left: 38%;
+        }
+        p {
+            font-family: "Mulish", sans-serif;
+            color: #767676;
+            width: 65%;
+            margin-top: -1.6rem;
+            line-height: 2;
+            font-weight: 600;
+        }
+        span {
+            display: flex;
+            gap: 1rem;
+            a {
+                color: $color-letters;
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+        
+        .hero-img {
+            margin-left: -15rem;
+            margin-top: auto;
+            img{
+                -webkit-animation: morph 5s ease-in-out infinite;
+                animation: morph 6s ease-in-out infinite;
+                border: 2px solid $color-letters;
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                transition: all 1s ease-in-out;
+                height: 22rem;
+            }
+        }
+    }
+    .skills {
+        margin-top: 4.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        h3 {
+            margin-top: 2.9rem;
+            border-right: 2px solid rgba(45, 46, 50, .5);
+            color: #2d2e32;
+            font-family: Mulish, sans-serif;
+            font-weight: 700;
+            padding-right: 1.5rem;
+        }
+        .logos {
+            margin-top: 1rem;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                list-style: none;
+                li {
+                    img {
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: transform 0.3s ease;
+                        &:hover{
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+@keyframes morph{
+
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
 }

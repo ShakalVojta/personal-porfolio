@@ -1,8 +1,8 @@
 import "/resources/scss/portfolio-page/Projects.scss";
 function Projects() {
     return ( 
-        <section id="projects">
-            <div>This is Projects</div>
+        <section id="projects" className="projects">
+            <div>New projects coming soon.. 🤠</div>
         </section>
      );
 }

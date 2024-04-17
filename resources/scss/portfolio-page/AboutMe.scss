@@ -1,3 +1,73 @@
+$color-letters: #2d2e32;
+$background-color: #fff;
+$hover-color: #147efb;
+
 #about-me {
-    color: yellow;
+    color: $color-letters;
+    background-color: $background-color;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    .container {
+        display: flex;
+        gap: 6rem;
+        .image-side {
+            position: relative;
+            .work-icon {
+                bottom: 0;
+                position: absolute;
+                right: -1.4rem;
+                width: 5rem !important;
+                z-index: 10;
+            }
+            .main-img {
+                border-radius: 1.7rem;
+                height: 25rem;
+                width: 28rem;
+            }
+
+            span {
+                background-color: #fff;
+                border-radius: 50%;
+                bottom: -3.3rem;
+                height: auto;
+                position: absolute;
+                width: 19rem;
+                left: 22rem;
+                width: auto;
+                img {
+                    -webkit-animation: rotate 9s linear infinite;
+                    animation: rotate 9s linear infinite;
+                    width: 10rem;
+                }
+            }
+        }
+
+        .text-side {
+            h3 {
+                color: $hover-color;
+                text-transform: uppercase;
+                
+            }
+            h4 {
+                font-weight: 700;
+                color: $color-letters;
+                font-size: 1.3rem;
+            }
+            p {
+                font-family: "Mulish", sans-serif;
+                color: #767676;
+                font-size: 1.1rem;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
 }

@@ -1,3 +1,167 @@
-#navigation {
-    color: blue;
+$color-letters: #2d2e32;
+$background-color: #fff;
+$hover-color: #147efb;
+
+.header {
+    background-color: $background-color;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .header-name {
+        width: 100%;
+
+        margin-top: 1.7rem;
+        margin-left: 1rem;
+        font-weight: 800;
+        font-size: 0.97rem;
+        a{
+            text-decoration: none;
+            color: $color-letters;
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        height: 4em;
+        margin-top: 0.7rem;
+        .burger_menu--container {
+            position: absolute;
+            top: 10px;
+            right: 0.4rem;
+            display: flex;
+            flex-direction: column;
+            padding-left: 8px;
+            &:hover {
+                cursor: pointer;
+            }
+            i {
+                background-color: $color-letters; 
+                width: 32px;
+                height: 4px;
+                margin: 4px;
+                border-radius: 2px;
+                transition: all ease 0.3s;
+            }
+            .open {
+                z-index: 2;
+                background-color: $color-letters;
+                transition: background-color 0.8s ease; 
+            }
+
+            .open:nth-child(1) {
+                transform: rotate(45deg) translateY(16px);
+            }
+
+            .open:nth-child(2) {
+                opacity: 0;
+            }
+
+            .open:nth-child(3) {
+                transform: rotate(-45deg) translateY(-16px);
+            }
+
+            .close:nth-child(1) {
+                transform: rotate(0) translateY(0);
+            }
+
+            .close:nth-child(2) {
+                opacity: 1;
+            }
+
+            .close:nth-child(3) {
+                transform: rotate(0) translateY(0);
+            }
+        }
+    }
+
+    .burger-menu-view {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .burger-menu-links{
+            list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5rem;
+        height: 100vh; 
+        width: 100vw;
+        margin: 0;
+        background-color: $background-color;
+        font-size: 1.3rem;
+        animation: slide-in 1s forwards;
+
+        @keyframes slide-in {
+            to {
+                transform: translateX(0%);
+            }
+            from {
+                transform: translateX(100%);
+            }
+        }
+
+        a {
+            text-align: center;
+            text-decoration: none; 
+            color: $color-letters; 
+            font-weight: 500; 
+            transition: color 0.3s ease; 
+            &:hover {
+                color: $hover-color; 
+            }
+        }
+        }
+    }
+    .full_screen {
+        display: none;
+        margin-right: 3rem;
+        .full_screen-links {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+
+            li {
+                padding: 0.7rem;
+    
+                a {
+                    text-decoration: none;
+                    color: $color-letters;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    transition: color 0.3s ease, transform 0.3s ease;
+                    text-transform: uppercase;
+    
+                    &:hover {
+                        color: $hover-color;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 800px) {
+    .header {
+        .burger-menu {
+            
+        .burger_menu--container {
+            display: none;
+        }
+        }
+        .full_screen {
+            display: block;
+        }
+    }
 }
